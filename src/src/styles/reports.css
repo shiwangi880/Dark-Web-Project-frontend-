@@ -1,0 +1,74 @@
+.reports-page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  background: #ffffff;
+  color: #020617;
+}
+
+/* ---------- Page Heading ---------- */
+.reports-page h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #0369a1; /* blue heading for theme consistency */
+}
+
+/* ---------- Grid ---------- */
+.reports-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+/* ---------- Report Card ---------- */
+.report-card {
+  background: #ffffff; /* keep card white */
+  padding: 16px;
+  border-radius: 12px;
+  border-top: 4px solid #0369a1; /* blue top border for theme */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Card headings */
+.report-card h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #0369a1; /* blue for headings */
+  margin-bottom: 10px;
+}
+
+/* Increase graph size */
+.report-card canvas {
+  max-height: 300px !important; /* slightly larger */
+}
+
+/* ---------- Summary ---------- */
+.report-summary {
+  background: rgba(3, 105, 161, 0.08); /* soft blue background */
+  padding: 18px;
+  border-radius: 12px;
+  color: #020617;
+}
+
+.report-summary h3 {
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #0369a1; /* heading blue */
+}
+
+.report-summary p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .reports-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .report-card canvas {
+    max-height: 250px !important; /* adjust for smaller screens */
+  }
+}

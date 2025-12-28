@@ -1,0 +1,223 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #fff;
+  color: #e5e7eb;
+}
+
+.app-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* ---------- Sidebar ---------- */
+.sidebar {
+  width: 220px;
+  background: #fff;
+  padding: 20px;
+}
+
+.logo {
+  color: #f6a623;
+  margin-bottom: 30px;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li {
+  padding: 12px;
+  cursor: pointer;
+  border-radius: 6px;
+  margin-bottom: 6px;
+}
+
+.sidebar li:hover,
+.sidebar li.active {
+  background: rgba(246, 166, 35, 0.15);
+  color: #f6a623;
+}
+
+/* ---------- Main ---------- */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-content {
+  padding: 20px;
+  overflow-y: auto;
+}
+
+/* ---------- Navbar ---------- */
+.top-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: #fff;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* space between brand and search bar */
+}
+
+.brand {
+  font-weight: bold;
+  font-size: 20px;
+  color: #000000; /* black */
+}
+
+.search-bar {
+  width: 600px;          /* long search bar */
+  background: #f1f5f9;   /* gray */
+  padding: 8px 12px;
+  border-radius: 10px;   /* slightly rounded */
+  border: 1px solid #e2e8f0;
+  outline: none;
+  font-size: 14px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile img {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  border: none;           /* removed border */
+}
+
+.profile-name {
+  font-weight: 600;
+  color: #020617;
+}
+
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 70px;
+    padding: 10px;
+  }
+
+  .logo {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .sidebar li {
+    font-size: 12px;
+    text-align: center;
+  }
+
+  .search-bar {
+    width: 140px;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .sidebar ul {
+    display: flex;
+    gap: 10px;
+  }
+}
+
+
+/* ---------- Sidebar ---------- */
+.sidebar {
+  width: 220px;
+  background: #ffffff;
+  border-right: 1px solid #e5e7eb;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+/* Logo */
+.sidebar .logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: #020617; /* black */
+  margin-bottom: 30px;
+  letter-spacing: 0.5px;
+}
+
+/* Menu */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex: 1;
+}
+
+.sidebar ul li {
+  padding: 12px 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #334155; /* soft slate */
+  font-weight: 500;
+}
+
+/* ❌ Hover removed */
+.sidebar ul li:hover {
+  background: transparent;
+  color: #334155;
+}
+
+/* ✅ Active item — light professional gradient */
+.sidebar ul li.active {
+  background: linear-gradient(
+    135deg,
+    #e0f2fe,
+    #f0f9ff
+  );
+  color: #0369a1;
+  font-weight: 600;
+  border-left: 4px solid #38bdf8;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 180px;
+    padding: 15px;
+  }
+
+  .sidebar .logo {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    position: fixed;
+    z-index: 100;
+    left: -220px;
+    transition: left 0.3s ease;
+  }
+}

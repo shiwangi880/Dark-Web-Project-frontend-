@@ -1,0 +1,94 @@
+.dashboard-page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  background: #ffffff;
+  min-height: 100vh;
+  color: #020617;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Summary Cards — LIGHT professional gradient */
+.summary-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: linear-gradient(135deg, #e0f2fe, #f0f9ff);
+  color: #0369a1;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(3,105,161,0.3);
+}
+
+.card h3 {
+  font-size: 24px;
+  margin: 10px 0 0;
+}
+
+/* Welcome text */
+.welcome-text {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #0369a1;
+}
+
+/* Chart Card */
+.chart-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Table Card */
+.table-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  overflow-x: auto;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* Risk Colors */
+.risk.low { color: #4ade80; }
+.risk.medium { color: #0369a1; }
+.risk.high { color: #f87171; }
+
+/* ML Prediction */
+.ml-prediction.safe { color: #4ade80; font-weight: 600; }
+.ml-prediction.fraud { color: #f87171; font-weight: 600; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .summary-cards { grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); }
+  table { min-width: 500px; }
+}
+
+@media (max-width: 480px) {
+  .dashboard-page h2, .welcome-text { font-size: 18px; }
+  th, td { font-size: 12px; padding: 6px; }
+}

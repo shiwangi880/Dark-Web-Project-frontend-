@@ -1,0 +1,126 @@
+.listings-page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: #ffffff;
+  padding: 20px;
+  min-height: 100vh;
+  color: #020617;
+}
+
+/* ---------- Header ---------- */
+.listings-page h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #0369a1; /* blue heading */
+}
+
+/* ---------- Search ---------- */
+.listings-page input {
+  width: 100%;
+  max-width: 400px;           /* longer search bar */
+  background: #f1f5f9;        /* same as TopNavbar */
+  border: 1px solid #e2e8f0; /* soft border */
+  color: #020617;
+  padding: 10px 14px;
+  border-radius: 10px;        /* slightly more rounded */
+  outline: none;
+  font-size: 14px;
+}
+
+.listings-page input::placeholder {
+  color: #64748b;
+}
+
+/* ---------- Table Card ---------- */
+.table-card {
+  background: #ffffff; /* keep table card white */
+  padding: 20px;
+  border-radius: 12px;
+  overflow-x: auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* ---------- Table ---------- */
+table {
+  width: 100%;
+  min-width: 650px;
+  border-collapse: collapse;
+}
+
+thead {
+  background: rgba(3, 105, 161, 0.1); /* soft blue header */
+}
+
+th {
+  font-size: 14px;
+  font-weight: 600;
+  color: #0369a1; /* blue text */
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+td {
+  font-size: 14px;
+  color: #020617; /* dark text */
+}
+
+/* ---------- Risk Colors (unchanged) ---------- */
+.risk.safe {       /* Safe */
+  color: #4ade80;
+  font-weight: 600;
+}
+
+.risk.warning {    /* Warning */
+  color:  #facc15;
+  font-weight: 600;
+}
+
+.risk.critical {      /* Critical */
+  color: #f87171;
+  font-weight: 600;
+}
+
+/* ---------- ML Prediction ---------- */
+.ml-prediction.safe {
+  color: #4ade80;
+  font-weight: 600;
+}
+
+.ml-prediction.fraud {
+  color: #f87171;
+  font-weight: 600;
+}
+
+/* ---------- Status ---------- */
+td:last-child {
+  font-weight: 600;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .listings-page input {
+    width: 100%;
+  }
+
+  table {
+    min-width: 600px;
+  }
+}
+
+@media (max-width: 480px) {
+  .listings-page h2 {
+    font-size: 18px;
+  }
+
+  th,
+  td {
+    font-size: 12px;
+    padding: 8px;
+  }
+}
