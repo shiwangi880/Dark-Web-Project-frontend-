@@ -1,4 +1,4 @@
-# Dark-Web-Fraud-Detection (Frontend)
+# Dark-Web-Fraud-Detection Dashboard (Frontend)
 
 Dark-Web-Project is a **React-based admin dashboard** for monitoring and detecting fraudulent listings, phishing attempts, and suspicious transactions. The dashboard provides real-time analytics, charts, reports, and settings management for fraud detection.
 
