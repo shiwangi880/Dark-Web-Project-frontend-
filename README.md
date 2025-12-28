@@ -81,7 +81,7 @@ npm start
 
 The app will run at http://localhost:3000. Make sure the backend server is running at http://localhost:5000.
 ---
-
+---
 ## Usage
 
 - Use the sidebar to navigate between Dashboard, Listings, Reports, and Settings.
@@ -90,7 +90,7 @@ The app will run at http://localhost:3000. Make sure the backend server is runni
 - Detect phishing by pasting messages into the Phishing page.
 - Detect transaction fraud by entering transaction details on the Transactions page.
 - Update preferences and themes in the Settings page.
-
+---
 ## API Endpoints (Frontend Integration)
 **The frontend communicates with a backend API at http://localhost:5000. Endpoints used:**
 Endpoint	          Method	          Description
@@ -102,6 +102,7 @@ Endpoint	          Method	          Description
 /settings       	   GET            Fetch user settings
 /settings         	 POST	          Update user settings
 
+---
 ## License
 
 This project is licensed under the MIT License.
